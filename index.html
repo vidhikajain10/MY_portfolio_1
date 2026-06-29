@@ -1,160 +1,460 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Vidhika Jain — Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Vidhika Jain | AI Engineer Portfolio</title>
 
-  <style>
-    :root{
-      --accent:#ff6fa3;
-      --muted:#bfc7d1;
-      --card: rgba(255,255,255,0.03);
-      --box-border: rgba(255,255,255,0.05);
-      --radius:12px;
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:#fff}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    /* background video */
-    #bg-video {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-    #bg-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.45);
-      z-index: -1;
-    }
+<style>
 
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+:root{
+--accent:#ff6fa3;
+--card:rgba(255,255,255,0.05);
+--text:#ffffff;
+--muted:#c8c8c8;
+}
 
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;min-height:62vh}
-    .hero-left{background:rgba(255,255,255,0.02);padding:36px;border-radius:var(--radius)}
-    .brand-dot{width:16px;height:16px;border-radius:4px;background:linear-gradient(135deg,var(--accent),#d05b9a);display:inline-block;margin-bottom:12px}
-    h1{font-family:'Playfair Display',serif;font-size:44px;margin:8px 0 10px}
-    h1 span{color:var(--accent)}
-    p.lead{color:var(--muted);line-height:1.6}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:11px 14px;border-radius:10px;font-weight:700;background:linear-gradient(90deg,var(--accent),#d05b9a);color:#fff;text-decoration:none}
-    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.2)}
+html{
+scroll-behavior:smooth;
+}
 
-    /* PHOTO */
-    .hero-right .frame{background:#ffd6db;padding:16px;border-radius:10px}
-    .hero-right img{
-      width:100%;
-      height:420px;
-      object-fit:cover;
-      border-radius:8px;
-      display:block;
-    }
+body{
+font-family:'Inter',sans-serif;
+color:white;
+overflow-x:hidden;
+}
 
-    /* PROJECTS */
-    .projects{margin-top:34px}
-    .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .proj-box{background:var(--card);padding:16px;border-radius:12px}
-    .proj-box h3{font-family:'Playfair Display',serif}
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
 
-    /* CONTACT */
-    .contact{margin-top:36px;display:grid;grid-template-columns:1fr 320px;gap:18px}
-    .card{background:var(--card);padding:18px;border-radius:12px}
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
+}
 
-    footer{text-align:center;margin-top:36px;color:var(--muted)}
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px;
+}
 
-    @media(max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .proj-grid{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-    }
-  </style>
+.hero{
+display:grid;
+grid-template-columns:1fr 350px;
+gap:40px;
+align-items:center;
+min-height:90vh;
+}
+
+.hero-content{
+background:rgba(255,255,255,0.03);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+.hero-content h1{
+font-family:'Playfair Display',serif;
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero-content span{
+color:var(--accent);
+}
+
+.hero-content p{
+line-height:1.8;
+color:var(--muted);
+font-size:17px;
+}
+
+.buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 20px;
+background:var(--accent);
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+.btn-outline{
+border:1px solid white;
+background:transparent;
+}
+
+.hero-image img{
+width:100%;
+height:430px;
+object-fit:cover;
+border-radius:20px;
+}
+
+section{
+margin-top:60px;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:25px;
+}
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+margin-bottom:20px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.project{
+background:var(--card);
+padding:20px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-8px);
+}
+
+.project h3{
+margin-bottom:10px;
+color:var(--accent);
+}
+
+.project p{
+color:var(--muted);
+line-height:1.6;
+}
+
+ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+.contact-links{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#cfcfcf;
+margin-top:50px;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Background video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="bg1.mp4" type="video/mp4">
-  </video>
-  <div id="bg-overlay"></div>
+<video autoplay muted loop id="bg-video">
+<source src="bg1.mp4" type="video/mp4">
+</video>
 
-  <div class="wrap">
+<div class="overlay"></div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <span class="brand-dot"></span>
-        <h1>Hi — I’m <span>Vidhika Jain</span></h1>
-        <p class="lead">
-          Final-year Integrated M.Tech student in Artificial Intelligence with hands-on
-          experience building enterprise-ready AI systems. Internship experience at
-          Bharat Electronics Limited (BEL) focusing on document intelligence and
-          offline-capable AI solutions.
-        </p>
+<div class="container">
 
-        <div class="cta-row">
-          <a class="btn" href="#projects">Explore Projects</a>
-          <a class="btn ghost" href="#contact">Contact</a>
-          <a class="btn ghost" href="VIDHIKA_JAIN_Resume.pdf" download>Download Resume</a>
-        </div>
-      </div>
+<section class="hero">
 
-      <!-- PHOTO IS HERE -->
-      <div class="hero-right">
-        <div class="frame">
-          <img src="https://github.com/vidhikajain10/MY_portfolio_1/blob/main/my_photi.jpg" alt="Vidhika Jain Photo">
-        </div>
-      </div>
-    </section>
+<div class="hero-content">
 
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
-      <h2>Selected Projects</h2>
-      <div class="proj-grid">
+<h1>Hi, I'm <span>Vidhika Jain</span></h1>
 
-        <div class="proj-box">
-          <h3>Enterprise AI Document Summarizer (BEL)</h3>
-          <p>Hybrid AI system with OCR, offline fallback, chunking, and table-to-text conversion.</p>
-        </div>
+<p>
+Integrated M.Tech student in Artificial Intelligence at VIT Bhopal with
+experience building AI-powered applications, document intelligence systems,
+and scalable backend solutions. Skilled in Python, Java, FastAPI,
+Machine Learning, Generative AI, Data Engineering and AI Agent Development.
 
-        <div class="proj-box">
-          <h3>CKD & Diabetes Prediction</h3>
-          <p>Machine learning web app using Python and Flask for healthcare prediction.</p>
-        </div>
+Former AI Intern at Bharat Electronics Limited (BEL), Bangalore.
+</p>
 
-        <div class="proj-box">
-          <h3>Plant Disease Detection (CNN)</h3>
-          <p>Deep learning model for detecting plant leaf diseases using CNNs.</p>
-        </div>
+<div class="buttons">
 
-      </div>
-    </section>
+<a href="#projects" class="btn">View Projects</a>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="card">
-        <h3>Get in touch</h3>
-        <p>Email: <b>jainvidhika410@gmail.com</b><br>Phone: <b>6261598340</b></p>
-      </div>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
 
-      <div class="card">
-        <h3>Quick links</h3>
-        <a class="btn" href="VIDHIKA_JAIN_Resume.pdf" download>Download Resume</a><br><br>
-        <a class="btn ghost" href="https://github.com/vidhikajain10" target="_blank">GitHub</a>
-      </div>
-    </section>
+<a href="RESUME_compressed.pdf" download class="btn">
+Download Resume
+</a>
 
-    <footer>© 2025 Vidhika Jain — Artificial Intelligence</footer>
-  </div>
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="my_photi.jpg" alt="Vidhika Jain">
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="card">
+<h3>Programming</h3>
+<p>Python, Java, SQL</p>
+</div>
+
+<div class="card">
+<h3>AI & Machine Learning</h3>
+<p>CNNs, NLP, Generative AI, Prompt Engineering, RAG</p>
+</div>
+
+<div class="card">
+<h3>Backend Development</h3>
+<p>FastAPI, REST APIs</p>
+</div>
+
+<div class="card">
+<h3>Data Engineering</h3>
+<p>PySpark, Apache Airflow, ETL Pipelines</p>
+</div>
+
+<div class="card">
+<h3>Tools</h3>
+<p>Git, Docker, Linux, GitHub</p>
+</div>
+
+<div class="card">
+<h3>Database</h3>
+<p>SQL, Relational Databases</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Experience</h2>
+
+<div class="card">
+
+<h3>AI Intern — Bharat Electronics Limited (BEL)</h3>
+
+<p><b>Nov 2025 – Dec 2025</b></p>
+
+<br>
+
+<ul>
+
+<li>Built scalable document processing systems handling 10K+ documents/day.</li>
+
+<li>Developed automated PDF and Word processing pipelines.</li>
+
+<li>Implemented NLP-based document summarization using HuggingFace.</li>
+
+<li>Designed hybrid offline and API-based AI inference systems.</li>
+
+<li>Improved document processing efficiency and workflow automation.</li>
+
+<li>Containerized services using Docker and Git.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="project-grid">
+
+<div class="project">
+
+<h3>AI Agent for End-to-End App Development</h3>
+
+<p>
+Built a multi-agent AI platform using CrewAI, Ollama, LangGraph,
+FastAPI and React for automated planning, coding, testing
+and deployment workflows.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Enterprise AI Document Summarizer</h3>
+
+<p>
+Document intelligence system featuring OCR,
+offline AI inference, NLP summarization,
+PDF processing and enterprise workflow automation.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Plant Disease Detection</h3>
+
+<p>
+CNN-based disease detection solution built using
+TensorFlow, Keras, OpenCV and Streamlit for
+real-time plant health prediction.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Inventory Demand Forecasting</h3>
+
+<p>
+Machine learning forecasting system using retail datasets
+to predict inventory demand and optimize stock management.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Achievements & Certifications</h2>
+
+<div class="card">
+
+<ul>
+
+<li>5★ in Problem Solving, Java and Python on HackerRank</li>
+
+<li>Diamond League (10,000+ Points) on Google Cloud Skills Boost</li>
+
+<li>Google Cloud Vertex AI Certifications</li>
+
+<li>Google Cloud Gemini Certifications</li>
+
+<li>Google Cloud Generative AI Certifications</li>
+
+<li>HackerRank SQL Certification</li>
+
+<li>HackerRank Python Certification</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p><b>Email:</b> jainvidhika410@gmail.com</p>
+
+<br>
+
+<p><b>Phone:</b> +91 6261598340</p>
+
+<br>
+
+<div class="contact-links">
+
+<a class="btn"
+href="https://github.com/vidhikajain10"
+target="_blank">
+GitHub
+</a>
+
+<a class="btn"
+href="www.linkedin.com/in/vidhika-jain-b11545251"
+target="_blank">
+LinkedIn
+</a>
+
+<a class="btn"
+href="RESUME_compressed.pdf"
+download>
+Resume
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Vidhika Jain | Artificial Intelligence Portfolio
+
+</footer>
+
+</div>
 
 </body>
 </html>
