@@ -41,7 +41,11 @@ box-sizing:border-box;
 }
 
 html{
+
 scroll-behavior:smooth;
+
+scroll-padding-top:100px;
+
 }
 
 body{
@@ -1433,69 +1437,318 @@ grid-template-columns:1fr;
 
 @media(max-width:650px){
 
-.navbar{
+    .container{
+        padding:0 20px;
+    }
 
-top:12px;
+    .navbar{
+        top:10px;
+        width:calc(100% - 30px);
+        padding:12px 16px;
+    }
 
-}
+    .logo{
+        font-size:20px;
+    }
 
-.hero-title{
+    .nav-links{
+        display:none;
+    }
 
-font-size:55px;
+    /* HERO */
 
-letter-spacing:-3px;
+    .hero{
+        min-height:auto;
+        padding-top:120px;
+        padding-bottom:70px;
 
-}
+        display:flex;
+        flex-direction:column;
 
-.hero-image{
+        gap:55px;
+    }
 
-height:380px;
+    .hero-left{
+        width:100%;
+    }
 
-}
+    .hero-label{
+        font-size:9px;
+        letter-spacing:2.5px;
+        line-height:1.6;
+        margin-bottom:20px;
+    }
 
-section{
+    .hero-title{
+        font-size:clamp(48px,15vw,65px);
+        letter-spacing:-3px;
+        line-height:.95;
+        margin-bottom:25px;
+    }
 
-padding:90px 0;
+    .hero-description{
+        font-size:14px;
+        line-height:1.8;
+    }
 
-}
+    .hero-buttons{
+        margin-top:25px;
+        gap:10px;
+    }
 
-.thinking{
+    .btn{
+        padding:11px 16px;
+        font-size:12px;
+    }
 
-grid-template-columns:1fr;
+    /* HERO IMAGE */
 
-}
+    .hero-right{
+        width:100%;
+        margin-top:10px;
+    }
 
-.think{
+    .hero-image-wrapper{
+        width:min(300px,85vw);
+        margin:auto;
+    }
 
-border-right:none;
+    .hero-image{
+        width:100%;
+        height:390px;
+    }
 
-}
+    .hero-image-wrapper::before{
+        top:12px;
+        left:12px;
+    }
 
-.bring-grid{
+    .hero-number{
+        right:-15px;
+        bottom:15px;
+        font-size:65px;
+    }
 
-grid-template-columns:1fr;
+    /* ABOUT */
 
-}
+    .intro{
+        min-height:auto;
+        padding-top:100px;
+        padding-bottom:100px;
 
-.achievement-grid{
+        display:block;
+    }
 
-grid-template-columns:1fr;
+    .intro-text{
+        font-size:
+        clamp(34px,10vw,48px);
 
-}
+        line-height:1.18;
 
-.intro-text{
+        letter-spacing:-1px;
+    }
 
-font-size:38px;
+    .section-label{
+        font-size:9px;
+        letter-spacing:3px;
+        margin-bottom:15px;
+    }
 
-}
+    /* GENERAL SECTIONS */
 
-footer{
+    section{
+        padding:90px 0;
+    }
 
-flex-direction:column;
+    .section-title{
+        font-size:
+        clamp(38px,11vw,55px);
 
-gap:10px;
+        letter-spacing:-1.5px;
+    }
 
-}
+    .section-description{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    /* SKILLS */
+
+    .skills-grid{
+        grid-template-columns:1fr;
+        margin-top:35px;
+    }
+
+    .skill{
+        min-height:auto;
+        padding:28px 22px;
+    }
+
+    .skill h3{
+        font-size:18px;
+    }
+
+    .skill p{
+        font-size:13px;
+    }
+
+    /* MARQUEE */
+
+    .marquee{
+        margin-top:55px;
+        padding:20px 0;
+    }
+
+    .marquee span{
+        font-size:26px;
+        margin-right:30px;
+    }
+
+    /* THINKING */
+
+    .thinking{
+        grid-template-columns:1fr;
+        margin-top:40px;
+    }
+
+    .think{
+        min-height:auto;
+        padding:30px 22px;
+
+        border-right:none;
+
+        border-bottom:1px solid var(--border);
+    }
+
+    .think:last-child{
+        border-bottom:none;
+    }
+
+    .think-number{
+        margin-bottom:25px;
+    }
+
+    .think h3{
+        font-size:24px;
+    }
+
+    /* AI FOCUS */
+
+    .ai-section{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .ai-big-number{
+        font-size:120px;
+        line-height:.7;
+    }
+
+    .ai-content p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .ai-pills{
+        gap:7px;
+    }
+
+    .ai-pill{
+        padding:8px 12px;
+        font-size:11px;
+    }
+
+    /* WHAT I BRING */
+
+    .bring-grid{
+        grid-template-columns:1fr;
+        margin-top:35px;
+    }
+
+    .bring{
+        min-height:auto;
+        padding:30px 22px;
+    }
+
+    .bring-number{
+        margin-bottom:25px;
+    }
+
+    .bring h3{
+        font-size:25px;
+    }
+
+    .bring p{
+        font-size:13px;
+    }
+
+    /* RESEARCH */
+
+    .research{
+        padding:80px 0;
+    }
+
+    .research-inner{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .research-quote{
+        font-size:42px;
+    }
+
+    .research-text{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    /* PHILOSOPHY */
+
+    .philosophy{
+        padding:100px 0;
+    }
+
+    .philosophy-text{
+        font-size:40px;
+        line-height:1.15;
+    }
+
+    /* ACHIEVEMENTS */
+
+    .achievement-grid{
+        grid-template-columns:1fr;
+        margin-top:35px;
+    }
+
+    .achievement{
+        padding:28px 22px;
+    }
+
+    /* CONTACT */
+
+    .contact{
+        padding-bottom:80px;
+    }
+
+    .contact-title{
+        font-size:
+        clamp(48px,14vw,70px);
+
+        line-height:.95;
+    }
+
+    .contact-info{
+        font-size:14px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+        padding:30px 0;
+        text-align:center;
+    }
 
 }
 
@@ -1588,7 +1841,7 @@ V<span>J</span>
 
 <div class="nav-links">
 
-<a href="#about">
+<a href="#about-section">
 About
 </a>
 
@@ -1749,6 +2002,7 @@ class="hero-image">
 ========================================================= -->
 
 <section
+id="about-section"
 class="intro reveal">
 
 
